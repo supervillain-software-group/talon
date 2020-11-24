@@ -22,8 +22,6 @@ class InstallCommand(install):
             'talon.signature',
             'talon.signature.*',
         ])
-        for not_required in ['numpy', 'scipy', 'scikit-learn==0.16.1']:
-            dist.install_requires.remove(not_required)
 
 
 setup(name='talon',
