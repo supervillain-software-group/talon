@@ -12,20 +12,18 @@ class InstallCommand(install):
 
     def initialize_options(self):
         install.initialize_options(self)
-        self.no_ml = True
 
     def finalize_options(self):
         install.finalize_options(self)
-        if self.no_ml:
-            dist = self.distribution
-            dist.packages=find_packages(exclude=[
-                'tests',
-                'tests.*',
-                'talon.signature',
-                'talon.signature.*',
-            ])
-            for not_required in ['numpy', 'scipy', 'scikit-learn==0.16.1']:
-                dist.install_requires.remove(not_required)
+        dist = self.distribution
+        dist.packages=find_packages(exclude=[
+            'tests',
+            'tests.*',
+            'talon.signature',
+            'talon.signature.*',
+        ])
+        for not_required in ['numpy', 'scipy', 'scikit-learn==0.16.1']:
+            dist.install_requires.remove(not_required)
 
 
 setup(name='talon',
