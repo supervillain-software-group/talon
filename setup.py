@@ -12,7 +12,7 @@ class InstallCommand(install):
 
     def initialize_options(self):
         install.initialize_options(self)
-        self.no_ml = None
+        self.no_ml = True
 
     def finalize_options(self):
         install.finalize_options(self)
