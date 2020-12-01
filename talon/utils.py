@@ -261,4 +261,8 @@ _RE_EXCESSIVE_NEWLINES = re.compile("\n{2,10}")
 
 # an extensive research shows that exceeding this limit
 # might lead to excessive processing time
-_MAX_TAGS_COUNT = 419
+
+# jjordan: bumping this to 2000  from 419 as a test. todo: make this an env var
+# and iteratively bump it, or decide on client on # of tags to attempt
+# parsing before invoking talon
+_MAX_TAGS_COUNT = 2000
