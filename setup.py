@@ -40,7 +40,7 @@ setup(name='talon',
       zip_safe=True,
       install_requires=[
           "lxml>=2.3.3",
-          "regex>=1",
+          "regex>=1,<3",
           'chardet>=1.0.1',
           'cchardet>=0.3.5',
           'cssselect',
