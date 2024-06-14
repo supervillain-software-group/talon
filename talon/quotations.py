@@ -188,7 +188,7 @@ SPLITTER_PATTERNS = [
 RE_LINK = re.compile('<(http://[^>]*)>')
 RE_NORMALIZED_LINK = re.compile('@@(http://[^>@]*)@@')
 
-RE_PARENTHESIS_LINK = re.compile("\(https?://")
+RE_PARENTHESIS_LINK = re.compile(r"\(https?://")
 
 SPLITTER_MAX_LINES = 6
 MAX_LINES_COUNT = 1000
